@@ -1,0 +1,52 @@
+Git is a version control system;
+Git is free software.
+#自报家门
+git config --global user.name "zhangxy"
+git config --global user.email "qq2003qq@126.com"
+#往仓库追加文件
+git add readme.txt
+#提交
+git commit -m "wrote a readme file"
+#常看当前状态
+git status
+#对比文件差异
+git diff
+#查看提交日志
+git log
+#友好显示log
+git log --pretty=oneline
+#回退版本
+#HEAD当前版本，HEAD^,上一个版本，HEAD^^，上上一个版本，第100个版本，HEAD~100
+git reset --hard HEAD^
+#还原到上一版本
+#badbd61c01b0adf26e6e2b8e8969f23bc6e7e7ca为commit id,可以只写前7位
+git reset --hard badbd61c01b0adf26e6e2b8e8969f23bc6e7e7ca
+#查看操作命令
+git reflog
+Git has a mutable index called stage.
+Git tracks changes  of files
+#撤销修改
+git checkout -- readme.txt
+#暂存区回退到工作区
+git reset HEAD readme.txt
+#删除文件
+git rm test.txt
+#关联github远程仓库
+git remote add origin https://github.com/heheddff/learngit.git
+#推送到远程仓库
+git push -u origin master
+#克隆远程仓库
+git clone git@github.com:heheddff/gitskills.git
+#创建分支并切换
+git checkout -b dev
+#查看当前分支
+git branch
+#切换到master分支
+git checkout master
+#删除分支
+git branch -d dev
+#创建分支，但不切换
+git branch <name>
+#合并分支
+git merge dev
+
